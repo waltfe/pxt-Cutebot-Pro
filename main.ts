@@ -1574,7 +1574,7 @@ namespace CutebotPro {
     //% group="Others"
     //% weight=1
     //% block="adc value %channel"
-    export function readAdc(channel:number): string {
+    export function readAdc(channel:number): number {
         let i2cBuffer = pins.createBuffer(7);
         i2cBuffer[0] = 0x99;
         i2cBuffer[1] = 0x16 + channel;
